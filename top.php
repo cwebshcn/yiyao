@@ -9,6 +9,7 @@
 <meta name="author" content="code by vic.tang">
 <title>首页</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css">
 <link href="css/index.css" rel="stylesheet">
 <link rel="icon" href="favicon.ico">
 </head>
@@ -23,7 +24,7 @@
                     <span>客户服务</span>
                 </li>
                 <li class="col-6 reg">
-                    <span>注册</span>  
+                    <span><a href="reg_member.php" style="color:#666">注册</a></span>  
                     <span>登录</span>  
                     <span>账户中心</span> 
                     <span>购物车</span> 
