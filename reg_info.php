@@ -1,17 +1,17 @@
 <?php include 'top.php';?>
 
 
-<?php    
-@$act=$_GET["act"];
-if($act){
+<?php  
 
 #弹出对话框
 function alert($message){echo ("<script>alert('". $message ."')</script>");}
 #返回上一页
 function GoBack(){echo("<script>history.back()</script>");}
 #重定向另外的连接
-function Go($url){echo ("<script>location.href='" . $url . "';</script>");}
-}
+function Go($url){echo ("<script>location.href='" . $url . "';</script>");}  
+@$act=$_GET["act"];
+@$v=$_GET["v"]+0;
+
 if($act=="usercheck"){
     @$emailto=$_GET["mail"];
     $rsreset=$lnk -> query("select * from user where username='$emailto'");
@@ -46,11 +46,13 @@ require 'phpmailer/class.phpmailer.php';
             $mail->IsSMTP();                           // tell the class to use SMTP
             $mail->SMTPAuth   = true;                  // enable SMTP authentication
             $mail->Port       = 25;                    // set the SMTP server port
-            $mail->Host       = "smtp.exmail.qq.com"; // SMTP server
-            $mail->Username   = "yzm@021px.com";     // SMTP server username
-            $mail->Password   = "Yzm2017";            // SMTP server password
-            $mail->From       = "yzm@021px.com";
-            $mail->FromName   = "pardi";
+            $mail->Host       = "smtp.163.com"; // SMTP server
+            $mail->Username   = "cheseboy2000";     // SMTP server username
+            $mail->Password   = "cwebshcn";            // SMTP server password
+            $mail->From       = "cheseboy2000@163.com";
+            $mail->FromName   = "rzm";
+
+
             $to = $emailto;
             $mail->AddAddress($to);
            // $mail->AddBCC('325381@qq.com','victang');   //密送
@@ -85,6 +87,11 @@ require 'phpmailer/class.phpmailer.php';
 }
 
 if($act=="reg"){
+    if(!$v){
+        alert("请选择用户类型！");
+        go("reg_member.php");
+        exit;
+    }
     $yzmcode=$_POST["yzmcode"]; //图形验证码
     if(strtolower($yzmcode)!=strtolower($_SESSION["yzm"])){
          echo '<script>'.strip_tags('alert("图形验证码错误 ！");history.back();').'</script>';
@@ -143,7 +150,7 @@ if($act=="reg"){
             $olduser=true;
         }
         if(!$olduser)
-        $lnk -> query("insert into user (username,password,niname,adddate) values('$email','".md5($pswd1)."','$email','".date("Y-m-d H:i:s")."')");
+        $lnk -> query("insert into user (username,password,nick_name,adddate,account_type) values('$email','".md5($pswd1)."','$email','".date("Y-m-d H:i:s")."','$v')");
     
     alert("注册成功！");
     go("login.php");
