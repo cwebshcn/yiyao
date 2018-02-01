@@ -221,3 +221,50 @@
 .pro_mid .pro_mid_right .biaoti_nei {
   height: 800px;
 }
+.dibu_liebiao {
+  background-color: #fff;
+  margin-top: 20px;
+}
+.dibu_liebiao p span:nth-child(1) {
+  float: left;
+  background-color: #c62d28;
+  font-size: 14px;
+  line-height: 40px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #c62d28;
+}
+.dibu_liebiao p span:nth-child(2) {
+  float: right;
+  font-size: 14px;
+  line-height: 40px;
+  display: block;
+  text-align: right;
+  color: #c62d28;
+  padding-right: 15px;
+}
+.dibu_liebiao .liebiaodi_img {
+  margin-top: 40px;
+}
+.dibu_liebiao .liebiaodi_img ul img {
+  width: 200px;
+  margin: 0 auto;
+}
+.dibu_liebiao .liebiaodi_img ul p {
+  color: #666;
+  font-size: 16px;
+  padding-left: 50px;
+}
+.dibu_liebiao .liebiaodi_img ul h5 {
+  color: #666;
+  font-size: 12px;
+  padding-left: 50px;
+}
+.dibu_liebiao .liebiaodi_img ul li {
+  color: #c62d28;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-top: 10px;
+}
