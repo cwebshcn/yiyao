@@ -8,7 +8,7 @@ a:active{outline:0;text-decoration: none;color: #FF0000;}
 ul{list-style:none}
 a{outline:0}
 img{border:0px}
-p{display:block;-webkit-margin-before:1em;-webkit-margin-after:1em;-webkit-margin-start:0;-webkit-margin-end:0}
+p{display:block;-webkit-margin-before:0em;-webkit-margin-after:0em;-webkit-margin-start:0;-webkit-margin-end:0}
 .clear{clear:both;height:0;line-height:0;font-size:0;margin:0;padding:0;border:0}
 .ellipsis{text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 body{ background-color:#cbc5af;}
