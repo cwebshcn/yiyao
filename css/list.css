@@ -189,9 +189,9 @@
   line-height: 50px;
 }
 .pro_mid .pro_mid_left .fenlei li {
-  background-color: #ccc;
+  background-color: #f9f9f9;
   line-height: 40px;
-  border-bottom: solid 1px #666;
+  border-bottom: solid 1px #dedede;
   font-size: 14px;
 }
 .pro_mid .pro_mid_left .fenlei li span {
@@ -212,10 +212,14 @@
   background-color: #c62d28;
 }
 .pro_mid .pro_mid_right .biaoti_right span {
-  background-color: #fff;
+  background-color: #666;
   margin-left: 10px;
-  line-height: 20px;
-  padding: 0 10px 0 10px;
+  line-height: 30px;
+  padding: 5px 15px;
+  color: #fff;
+}
+.pro_mid .pro_mid_right .biaoti_right .active{
+  background-color: #fff;
   color: #c62d28;
 }
 .pro_mid .pro_mid_right .biaoti_nei {

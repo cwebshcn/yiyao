@@ -13,6 +13,7 @@ include 'admin/config/config.php';
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css">
 <link href="css/index.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
 <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -27,7 +28,7 @@ include 'admin/config/config.php';
                 </li>
                 <li class="col-6 reg">
                     <span><a href="reg_member.php" style="color:#666">注册</a></span>  
-                    <span>登录</span>  
+                    <span><a href="login.php" style="color:#666">登录</a></span>  
                     <span>账户中心</span> 
                     <span>购物车</span> 
                 </li>
@@ -91,11 +92,11 @@ include 'admin/config/config.php';
                 </div>
                 <div id="menu_title" class="col-6">
                     <a href="index.php">网站首页</a>
-                    <a href="#">服务搜索</a>       
-                    <a href="#">发布项目</a>       
-                    <a href="#">专业咨询</a>       
-                    <a href="#">文献支持</a>
-                    <a href="#">培训</a>      
+                    <a href="search.php">服务搜索</a>       
+                    <a href="my_item_push.php">发布项目</a>       
+                    <a href="my_consult.php">专业咨询</a>       
+                    <a href="literature.php">文献支持</a>
+                    <a href="train.php">培训</a>      
                     
                 </div>
                 <div id="slg" class="col-3">

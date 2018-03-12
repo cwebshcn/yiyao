@@ -1,16 +1,11 @@
-<?php include 'top.php';?>
+<?php include 'top.php';
+include 'admin/function/function.php';?>
 
 
 <?php  
 
-#弹出对话框
-function alert($message){echo ("<script>alert('". $message ."')</script>");}
-#返回上一页
-function GoBack(){echo("<script>history.back()</script>");}
-#重定向另外的连接
-function Go($url){echo ("<script>location.href='" . $url . "';</script>");}  
 @$act=$_GET["act"];
-@$v=$_GET["v"]+0;
+@$v=$_REQUEST["v"]+0;
 
 if($act=="usercheck"){
     @$emailto=$_GET["mail"];
@@ -57,7 +52,7 @@ require 'phpmailer/class.phpmailer.php';
             $mail->AddAddress($to);
            // $mail->AddBCC('325381@qq.com','victang');   //密送
             //$mail->AddBCC('1515052886@qq.com','victang');   //密送
-            $mail->Subject  = "上海企业培训网注册验证码（系统自动邮件,请勿答复） ";
+            $mail->Subject  = "上海医研站网注册验证码（系统自动邮件,请勿答复） ";
             $mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
             $mail->WordWrap   = 80; // set word wrap
             $mail->MsgHTML($body);
@@ -93,6 +88,7 @@ if($act=="reg"){
         exit;
     }
     $yzmcode=$_POST["yzmcode"]; //图形验证码
+    $yzm=$_SESSION['yzm'];
     if(strtolower($yzmcode)!=strtolower($_SESSION["yzm"])){
          echo '<script>'.strip_tags('alert("图形验证码错误 ！");history.back();').'</script>';
          goback();
@@ -150,8 +146,8 @@ if($act=="reg"){
             $olduser=true;
         }
         if(!$olduser)
-        $lnk -> query("insert into user (username,password,nick_name,adddate,account_type) values('$email','".md5($pswd1)."','$email','".date("Y-m-d H:i:s")."','$v')");
-    
+        $lnk -> query("insert into user (username,password,email,nick_name,adddate,account_type) values('$email','".md5($pswd1)."','$email','$email','".date("Y-m-d H:i:s")."','$v')");
+    //echo ("insert into user (username,password,nick_name,adddate,account_type) values('$email','".md5($pswd1)."','$email','".date("Y-m-d H:i:s")."','$v')");
     alert("注册成功！");
     go("login.php");
     exit;
@@ -169,7 +165,7 @@ if($act=="reg"){
     <div style="position:absolute; border:#CCC 1px solid;min-height:270px; max-width:385px; background:#FFF; top:0px; right:0px">
         <ul style="margin:33px">
         <ul class="login_2" style="font-size:20px; margin-bottom:10px">注册新会员</ul>  
-        <form class="uk-from login-form" name="myform" action="reg_member.php?act=reg" method="post">
+        <form class="uk-from login-form" name="myform" action="reg_info.php?act=reg" method="post">
           <div class="form-group">
             <label class="uk-form-label empty" for="form-h-it"><span style="color:#C00">*</span> <span>邮箱地址</span></label>
             <input type="email" class="form-control " id="username" placeholder="请输入E-mail" name="username">
@@ -196,7 +192,7 @@ if($act=="reg"){
               </div>
               <div class="col-xs-5 empty" style="margin-top:20px"><button type="button" class="btn btn-info" style=" background-color:#ff3300; border-radius:0; height:36px; max-width:100px; margin-left:15px" name="yzmcodesms" id="yzmcodesms">发送至邮箱</button></div>
           </div>
-   
+        <input type="hidden" name="v" value="<?php echo $v?>">
 
           
           

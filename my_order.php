@@ -1,4 +1,5 @@
-<?php include 'top.php';?>
+<?php include 'top.php';
+include 'admin/function/function.php';?>
 <div id="list">
     <div id="list_banner" style="background-image:url(img/tmp_banner.jpg)"></div>
 </div>

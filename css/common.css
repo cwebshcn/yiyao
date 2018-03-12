@@ -54,8 +54,7 @@
   position: relative;
   margin-top: 5px;
   background-color: #fff;
-  border: solid 1px #333;
-  border-radius: 5px;
+  border: solid 1px #ccc;
   height: 600px;
 }
 .neirong .biaodan {
@@ -71,6 +70,8 @@
 .neirong .biaodan input:nth-child(2) {
   width: 80px;
   height: 28px;
+  background-color: #f1f1f1;
+  border:1px solid #ccc;
 }
 .neirong .biaodan input:nth-child(3) {
   width: 220px;
@@ -79,11 +80,11 @@
   float: right;
   margin-right: 30px;
   border: none;
-  background-color: yellow;
+  background-color: orange;
   height: 28px;
 }
 .neirong .menu_biao {
-  background-color: #ccc;
+  background-color: #f5f5f5;
   font-size: 14px;
   font-weight: 900;
   margin: 10px 30px 0 20px;
@@ -97,16 +98,17 @@
   font-weight: 900;
 }
 .neirong .menu_biao ul:nth-child(3) {
-  color: red;
+  color: #8B0000;
 }
 .neirong .xiang {
-  border: solid 1px #666;
+  border: solid 1px #ccc;
   border-radius: 2px;
   margin: 8px 30px 0 20px;
-  background-color: #ccc;
+  background-color: #f9f9f9;
 }
+
 .neirong .xiang .xiang_tou {
-  background-color: #666;
+  background-color: #f1f1f1;
   height: 30px;
 }
 .neirong .xiang .xiang_tou span {
@@ -115,7 +117,7 @@
   font-size: 13px;
 }
 .neirong .xiang .xiang_tou input {
-  background-color: blue;
+  background-color: #87CEEB;
   color: #fff;
   font-size: 13px;
   height: 20px;
@@ -137,7 +139,7 @@
 .neirong .xiang .xiang_zhong li input {
   height: 20px;
   line-height: 20px;
-  background-color: red;
+  background-color: #CD2626;
   border: none;
   border-radius: 5px;
   margin-left: 5px;
@@ -165,3 +167,153 @@
   color: #fff!important;
   border: solid 1px #fff!important;
 }
+
+.peixun,.peixunTitle{
+  margin: 15px auto 0;
+}
+.peixunTitle th{
+  line-height: 30px;
+  font-size: 13px;
+  background-color: #f5f5f5;
+  padding: 0 10px;
+}
+.peixun tr:nth-of-type(odd){
+  background-color: #f5f5f5;
+} 
+.peixun tr td{
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+.peixun tr td span{
+  color: #cd0000
+}
+.peixun tr td a{
+  color: #333
+}
+.mimaform{
+  width: 300px;
+  margin:240px auto 0;
+  font-size: 13px
+}
+.mimaform span{
+  padding-left: 14px
+}
+.mimaform div{
+  margin-bottom: 10px;
+}
+.mimaform div:last-child{
+  width: 100px;
+  margin: 0 auto
+}
+.mimaform button{
+  background-color: #cd0000;
+  color: #fff;
+  border:0;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 5px
+}
+.inforform{
+  padding: 50px;
+}
+.inforform div{
+  font-size: 13px;
+  font-weight: 100;
+  margin-bottom: 10px;
+
+}
+.inforform span:first-child{
+  color: #cd0000
+}
+.inforform span:nth-child(2){
+  color: #fff;
+  background-color: #cd0000;
+  padding:0px 4px;
+}
+.jieshao{
+  padding: 10px;
+}
+.jieshao button{
+  color: #fff;
+  background-color: green;
+  border:0;
+}
+.zizhi{
+  padding: 40px 20px;
+}
+.zizhi ul span{
+  color: #cd0000;
+  padding-right: 20px
+}
+.zizhi ul{
+  color: #999;
+  margin-bottom: 10px;
+}
+.zizhi ul button{
+  background-color: #cd0000;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin-right: 20px
+}
+.zizhi ul img{
+  height: 150px;
+  margin-bottom: 10px;
+}
+.zizhi>button{
+  width: 100px;
+  background-color: #cd0000;
+  color: #fff;
+  border:0;
+  border-radius: 5px;
+}
+.zizhanghu{
+  margin: 0 auto
+}
+.zizhanghu tr{
+  margin-bottom: 5px;
+}
+.zizhanghu tr td{
+  padding: 0 10px;
+}
+.zizhanghu tr:nth-of-type(odd){
+  background-color: #f9f9f9;
+  color: #666;
+  font-size: 13px;
+  height: 30px;
+}
+.zizhanghu tr:nth-of-type(even){
+  background-color: #f1f1f1;
+  color: #666;
+  font-size: 13px;  
+  height: 30px;
+}
+.zizhanghu tr td.dongjie{
+  color: #cd0000
+}
+.zizhanghu tr td.zhengchang{
+  color: green;
+}
+.zizhanghu tr td button{
+  background-color: #cd0000;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+.bd{
+  padding:15px;
+}
+.bd strong{
+  color:#ff3300;
+}
+.fff{
+  background:#fff;
+  text-align: right;
+}
+
+
+
+
+
+

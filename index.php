@@ -1,11 +1,12 @@
-<?php include 'top.php';?>
+<?php include 'top.php';
+include 'admin/function/function.php';?>
 <div id="top_banner">
     <div style="background-image:url(img/banner_tmp.jpg)" class="banner_img"></div>
     <div class="banner_right pagewidth"><img src="img/tmp_banner_right.jpg"></div>
 </div>
 <div id="get_user_phone" class="pagewidth">
     <div id="get_user_phone_title">发布信息</div>
-    <div id="get_user_phone_body"><img src="img/tmp_getuser.jpg"></div>
+    <div id="get_user_phone_body"><a href="c_business_push.php"><img src="img/tmp_getuser.jpg" border="0"></a></div>
 </div>
 
 

@@ -1,6 +1,6 @@
 <?php
 //本地数据库
-
+session_start();
 $server_t="localhost"; 	// 服务器
 $username_sql_t="sq_yiyao"; 	// MYSQL用户名
 $password_sql_t="VUsKyjRQG2J2VrMp"; 	// MYSQL密码VUsKyjRQG2J2VrMp  nVxEmAZ9PfNwLzU9

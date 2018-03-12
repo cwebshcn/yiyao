@@ -1,4 +1,5 @@
-<?php include 'top.php';?>
+<?php include 'top.php';
+include 'admin/function/function.php';?>
 <div class="pagewidth" id="reg_memeber">
     <div class="row">
         <ul class="col-lg-4 col-md-4">
