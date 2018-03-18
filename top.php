@@ -92,7 +92,7 @@ include 'admin/config/config.php';
                 </div>
                 <div id="menu_title" class="col-6">
                     <a href="index.php">网站首页</a>
-                    <a href="search.php">服务搜索</a>       
+                    <a href="service.php">服务搜索</a>       
                     <a href="my_item_push.php">发布项目</a>       
                     <a href="my_consult.php">专业咨询</a>       
                     <a href="literature.php">文献支持</a>
